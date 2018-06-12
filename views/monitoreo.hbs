@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu:500" rel="stylesheet">  
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">        
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+
+        {{!-- <link rel="stylesheet" href="style.css"> --}}
+        <script>
+      
+
+        </script>
+        <style>
+            body{
+                font-family: 'Teko', sans-serif;
+                font-size: 400%;
+                color: aquamarine;
+            }
+            .center-fit {
+                max-width: 100%;
+                max-height: 100vh;
+                margin: auto;
+                padding: 40px;   
+            }
+
+            #chartContainer{
+                position: absolute;
+            }
+
+            .spo2b{
+                display: inline-block;
+                position: relative;
+                top 50%;
+                background-color:transparent;
+                width: 25%;
+                height: 0;
+                border-radius: 30%;
+                padding-bottom: 25%;
+                text-align: center;
+                margin: 0 25px 0 0;
+            }
+            .labelBlock{
+                height:11vh;    
+                
+            }
+            .label{
+                
+                display: inline-block;
+                
+                font-size: 10vw;
+                
+            }
+            .ecgblock{
+                display: inline-block;    
+                position: relative;    
+                top 50%;
+                background-color:transparent;
+                width: 25%;
+                height: 0;
+                border-radius: 30%;
+                padding-bottom: 25%;
+                text-align: center;
+                
+            }
+            #spo2value{
+                color:white;
+                background-color: rgba(51, 150, 153, 0.671);
+                position: absolute;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%, -50%);
+                height: 90%;
+                width: 90%;
+                border-radius: 30%;
+                display: block;
+                align-items: center;
+                text-align: center;
+                vertical-align: sub;
+                justify-content: center;
+                font-size: 10vw;
+                cursor: pointer;
+                box-shadow: 0 0 0 rgba(0, 255, 255, 0.4);
+                animation: pulse 5s infinite;
+                border-style: solid rgba(0, 255, 255, 0.4);
+                
+            }
+            #spo2value:hover{
+                animation: none;
+            }
+            #ecg{
+                color:white;
+                background-color: rgba(34, 199, 169, 0.637);
+                position: absolute;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%, -50%);
+                height: 90%;
+                width: 90%;
+                border-radius: 30%;
+                display: block;
+                align-items: center;
+                justify-content: center;
+                font-size: 10vw;
+                animation: pulse2 5s infinite;
+                border-style: solid rgba(51, 150, 153, 0.671) ;
+            }
+            #lbSpo{
+                color: rgba(51, 150, 153, 0.671);       
+                margin-right: 8vw;
+            }
+            #lbEcg{
+                color: rgba(34, 199, 169, 0.637);
+                margin-left: 5vw;
+            }
+            @media screen and (max-width: 375px){   
+                #lbSpo{
+                    color: rgba(51, 150, 153, 0.671);       
+                    margin-right: 8vw;
+                }
+                #lbEcg{
+                    color: rgba(34, 199, 169, 0.637);
+                    margin-left: 8vw;
+                }   
+                    
+            }
+            @media screen and (max-width:270px ){   
+                #lbSpo{
+                    color: rgba(51, 150, 153, 0.671);       
+                    margin-right: 10vw; 
+                }
+                #lbEcg{
+                    color: rgba(34, 199, 169, 0.637);
+                    margin-left: 10vw;
+                }   
+                    
+            }
+       
+            @keyframes pulse {
+                0% {
+                    -moz-box-shadow: 0 0 0 0 rgba(51, 150, 153, 0.671);
+                    box-shadow: 0 0 0 0 rgba(51, 150, 153, 0.671);
+                }
+                70% {
+                    -moz-box-shadow: 0 0 0 10px rgba(51, 150, 153, 0.671);
+                    box-shadow: 0 0 0 10px rgba(51, 150, 153, 0.671);
+                }
+                100% {
+                    -moz-box-shadow: 0 0 0 0 rgba(51, 150, 153, 0.671);
+                    box-shadow: 0 0 0 0 rgba(51, 150, 153, 0.671);
+                }
+            }
+
+          
+            @keyframes pulse2 {
+                0% {
+                    -moz-box-shadow: 0 0 0 0 rgba(34, 199, 169, 0.637);
+                    box-shadow: 0 0 0 0 rgba(34, 199, 169, 0.637);
+                }
+                70% {
+                    -moz-box-shadow: 0 0 0 10px rgba(34, 199, 169, 0.637);
+                    box-shadow: 0 0 0 10px rgba(34, 199, 169, 0.637);
+                }
+                100% {
+                    -moz-box-shadow: 0 0 0 0 rgba(34, 199, 169, 0.637);
+                    box-shadow: 0 0 0 0 rgba(34, 199, 169, 0.637);
+                }
+            }
+
+        </style>
+        <title>N-CHECK</title>
+    </head>
+    <body>
+        <center >
+            <div class="Logo2">
+                <img class="center-fit" src="img/Logo2.png">
+            </div>
+            <div class="labelBlock">  
+                <h2 class="label" id="lbSpo">SPO2</h2>
+                <h2 class="label" id="lbEcg">LPM</h2>
+            </div>    
+            <span class="spo2b">
+                <p id="spo2value" onclick="colorChange">...</p>
+            </span>
+            <span class="ecgblock"> 
+                <p id="ecg">...</p>
+            </span>
+        </center>
+        <p class="grafica">
+            <div id="chartContainer" style="height: 200px; width:100%;"></div>
+        </p>
+        <input type="hidden" name="userId" id="userId" value="{{userId}}">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/monitoreo.js"></script>
+        <script src="/js/canvasjs.min.js"></script>
+    </body>
+</html>

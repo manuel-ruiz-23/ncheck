@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu:500" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <title>N-CHECK</title>
+</head>
+<body>
+  {{!-- Bannner --}}
+      <div class="Logo2">
+          <img class="center-fit" src="img/Logo2.png">
+      </div>
+      {{!-- Termina Banner --}}
+    <center>
+      <p class="intro">Ncheck es un servicio de biometría y monitoreo a distancia.</p>
+      <p>{{session}}</p>
+      
+        {{#if session}}
+          <a href="/monitoreo" class="block">Monitoreo</a>
+          <br>
+          <a href="/profile" class="block">Perfil</a>
+        {{else}}
+          <a href="/auth/registro" class="block">Registro</a>
+          <br>
+          <a href="/auth/login" class="block">Iniciar sesión</a> 
+        {{/if}} 
+      
+   
+    </center>
+
+        
+
+</body>
+</html>

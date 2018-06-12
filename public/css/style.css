@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Do+Hyeon|Istok+Web');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*{
+color: red;
+background-image: url(/../img/background.jpg);
+
+}
+h1{
+    background-color: blue; 
+}

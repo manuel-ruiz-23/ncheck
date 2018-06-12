@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login | Ncheck</title>
+	<!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<base href="/">
+	<link rel="stylesheet" href="style.css" >
+  	<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Do+Hyeon|Istok+Web" rel="stylesheet">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+   	<link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu:500" rel="stylesheet">  
+	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+</head>
+<body>
+	    {{!-- Bannner --}}
+    <div class="Logo2">
+          <img class="center-fit" src="img/Logo2.png">
+    </div>
+      {{!-- Termina Banner --}}
+	
+	
+		
+	<div class="Forma"> 
+		<center><h3>Iniciar sesión</h3></center>	
+		<form action="/auth/login" method="post"> 
+			<p><input type="text" name="email" Placeholder="E-mail" required=""/></p>
+			<p><input type="password" name="password" Placeholder="Contraseña" required=""/></p>
+			<p><input type="submit" class="block" value="Iniciar sesión"> </p>
+		</form> 	
+	</div> 
+					
+</body>
+</html>

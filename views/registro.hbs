@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{!-- Etiqueta Arcana --}}
+  <base href="/">
+  {{!-- Termina el Fix Arcano --}}
+  <link rel="stylesheet" href="style.css" >
+  <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Do+Hyeon|Istok+Web" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu:500" rel="stylesheet"> 
+   <link rel="shortcut icon" type="image/png" href="favicon.ico"/> 
+	<title>Document</title>
+</head>
+<body>
+    {{!-- Bannner --}}
+    <div class="Logo2">
+          <img class="center-fit" src="img/Logo2.png">
+    </div>
+      {{!-- Termina Banner --}}
+
+    <div class="Forma"> 
+      <center><h3>Registro</h3></center>
+      
+      <form action="auth/registro" method="post">
+        <p><input type="text" name="email" placeholder="E-mail" required=""> </p>
+        <p><input type="text" name="username" placeholder="Username" required=""></p>
+        <p><input type="password" name="password" placeholder="Password" required=""></p>
+        <p><input type="password" name="passwordConf" placeholder="Confirm Password" required=""></p>
+        <p><input type="submit" class="block" id="btnRegistro" value="Registro"></p>
+      </form>
+    </div>
+</body>
+</html>
